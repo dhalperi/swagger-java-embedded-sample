@@ -14,7 +14,7 @@ public final class SampleJaxRsWebserver {
 	private final HttpServer webServer;
 
 	public SampleJaxRsWebserver(final int port) throws IOException {
-		URI baseUri = UriBuilder.fromUri("http://localhost/").port(port)
+		URI baseUri = UriBuilder.fromUri("http://localhost/api").port(port)
 				.build();
 		ResourceConfig masterApplication = new SampleJaxRsApplication();
 		webServer = GrizzlyServerFactory.createHttpServer(baseUri,
